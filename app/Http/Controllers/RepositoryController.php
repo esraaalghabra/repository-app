@@ -41,7 +41,7 @@ class RepositoryController extends Controller
             'user_id' => $request->user()->id,
             'is_admin' => 1,
         ]);
-        return $this->success($repository, 'User has been register successfully to repository');
+        return $this->success($repository, 'User has been register successfully to his repository');
 
     }
 
