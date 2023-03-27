@@ -108,6 +108,7 @@ class UserController extends Controller
         //validation data
         $validator = Validator::make($request->all(), [
             'photo' => 'mimes:jpg,jpeg,png,jfif',
+            'name' => 'string|max:255',
         ]);
         if ($validator->fails())
             return $this->error($validator->errors()->first());
@@ -120,6 +121,10 @@ class UserController extends Controller
                 $path = $request->file('photo')->storeAs('users', $name[0] . '.' . $request->file('photo')->extension(), 'images');
                 $path = explode('/', $path);
                 $user->update(['photo' => $path[1]]);
+                $user->save();
+            }
+            if ($request->has('name')) {
+                $user->update(['name' => $request->name]);
                 $user->save();
             }
         }catch (\Exception $e){
