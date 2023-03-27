@@ -32,7 +32,7 @@ class SupplierController extends Controller
         ]);
         if ($validator->fails())
             return $this->error($validator->errors()->first());
-        $suppliers = Supplier::where('repository_id',$request->repository_id)->get();
+        $suppliers = Supplier::where('repository_id', $request->repository_id)->get();
         foreach ($suppliers as $supplier) {
             $invoices = PurchaseInvoice::where('supplier_id', $supplier->id)->get();
             $details = $this->getTotalDebts($invoices);
@@ -364,6 +364,35 @@ class SupplierController extends Controller
         return $this->success($suppliers);
     }
 
+    /**
+     * get Archive Supplier
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function getArchiveSupplier(Request $request): JsonResponse
+    {
+        $validator = Validator::make($request->all(), [
+            'id' => 'required|numeric|exists:suppliers,id',
+        ]);
+        if ($validator->fails()) {
+            return $this->error($validator->errors()->first());
+        }
+        $supplier = Supplier::with(['purchases_invoices' => function ($q) {
+            return $q->onlyTrashed();
+        }])
+            ->onlyTrashed()->where('id', $request->id)->first();
+        if (!$supplier)
+            return $this->error('supplier not found in archive');
+        $data = Supplier::onlyTrashed()->where('id', $request->id)->first();
+        $d = $this->getTotalDebts($supplier->purchases_invoices);
+        $data['debts'] = $d['debts'];
+        $data['invoices_total'] = $d['invoices_total'];
+        $details['purchases_invoices'] = $supplier->purchases_invoices;
+        $data['details'] = $details;
+        $data['photo'] = asset('assets/images/clients/' . $supplier->photo);
+        return $this->success($data);
+    }
+
 
     public function getSupplierRegister(Request $request)
     {
@@ -374,7 +403,7 @@ class SupplierController extends Controller
             return $this->error($validator->errors()->first());
         }
         $is_admin = RepositoryUser::where('user_id', $request->user()->id)->first();
-        if ($is_admin->is_admin!=1)
+        if ($is_admin->is_admin != 1)
             return $this->error('ypu can not see this register');
         $rigister = SupplierRegister::with(['user' => function ($q) {
             return $q->select('id', 'name');
@@ -391,7 +420,7 @@ class SupplierController extends Controller
             return $this->error($validator->errors()->first());
         }
         $is_admin = RepositoryUser::where('user_id', $request->user()->id)->first();
-        if ($is_admin->is_admin!=1)
+        if ($is_admin->is_admin != 1)
             return $this->error('ypu can not delete this register');
         SupplierRegister::where('id', $request->id)->delete();
         return $this->success();
