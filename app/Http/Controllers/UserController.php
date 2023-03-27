@@ -91,10 +91,10 @@ class UserController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function logout(Request $request):JsonResponse
+    public function logout():JsonResponse
     {
         //expire token
-        $request->user()->currentAccessToken()->delete();
+        auth()->user()->currentAccessToken()->delete();
         //response success
         return $this->success(null, 'Logout successfully');
     }

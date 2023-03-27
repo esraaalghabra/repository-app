@@ -152,7 +152,7 @@ class CategoryController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:categories,id',
-            'name' => 'required|string|min:3|max:30|unique:categories,name,' . $request->id,
+            'name' => 'required|string|min:3|max:30|',
             'photo' => 'mimes:jpg,jpeg,png,jfif',
         ]);
         if ($validator->fails())
@@ -203,7 +203,7 @@ class CategoryController extends Controller
         if (count($category->products) > 0 ||
             count($category->sales) > 0 ||
             count($category->purchases) > 0)
-            return $this->error('You cannot delete the repository');
+            return $this->error('You cannot delete the Category');
         $category->delete();
         return $this->success();
     }

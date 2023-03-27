@@ -115,10 +115,9 @@ class PurchaseInvoiceController extends Controller
                 $purchase->product->update([
                     'amount' => $purchase->product->amount + $purchase['amount']
                 ]);
+                $purchase->product->save();
             }
-            $purchase->save();
-
-            $register = PurchaseInvoiceRegister::create([
+            PurchaseInvoiceRegister::create([
                 'purchase_invoice_id' => $purchase_invoice->id,
                 'user_id' => $request->user()->id,
                 'type_operation' => 'add',
@@ -153,7 +152,6 @@ class PurchaseInvoiceController extends Controller
 
             $purchase_invoice = PurchaseInvoice::where('id', $request->id)->with('purchases')->with('register')->first();
             $purchase_invoice->update([
-                'repository_id' => $request->user()->repositories->first()->id,
                 'supplier_id' => $request->supplier_id,
                 'total_price' => $request->total_price,
                 'paid' => $request->paid,
@@ -166,7 +164,6 @@ class PurchaseInvoiceController extends Controller
             $purchases = json_decode($request->purchases);
             foreach ($purchases as $purchase) {
                 Purchase::create([
-                    'repository_id' => $request->user()->repositories->first()->id,
                     'product_id' => $purchase->product_id,
                     'purchase_invoice_id' => $purchase_invoice->id,
                     'amount' => $purchase->amount,
@@ -184,7 +181,7 @@ class PurchaseInvoiceController extends Controller
             $register = PurchaseInvoiceRegister::create([
                 'purchase_invoice_id' => $purchase_invoice->id,
                 'user_id' => $request->user()->id,
-                'type_operation' => 'update',
+                'type_operation' => 'edit',
             ]);
             DB::commit();
             return $this->success();

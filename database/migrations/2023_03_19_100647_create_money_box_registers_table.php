@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('money_box_id')->constrained('money_box')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained('user')->cascadeOnUpdate()->cascadeOnDelete();
             $table->date('date')->default(now());
-            $table->enum('type_operation',['add_cash','withdrawal_cash']);
+            $table->enum('type_operation',['add','edit']);
 
             $table->timestamps();
         });

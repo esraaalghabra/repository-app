@@ -81,7 +81,6 @@ class RepositoryController extends Controller
         $repository->delete();
         return $this->success();
     }
-
     public function joinRepository(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -99,11 +98,9 @@ class RepositoryController extends Controller
             ]);
         return $this->success($repository);
     }
-
-    public function getRepositoriesForUser(Request $request)
+    public function getRepositoriesForUser()
     {
-        $repositories = User::with('repositories')->find($request->user()->id)->repositories;
-
+        $repositories = User::with('repositories')->find(auth()->user()->id)->repositories;
         return $this->success($repositories);
     }
 

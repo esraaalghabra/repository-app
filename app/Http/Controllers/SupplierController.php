@@ -211,7 +211,7 @@ class SupplierController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function meetDebt(Request $request)
+    public function meetDebt(Request $request): JsonResponse
     {
         $i = 0;
         $validator = Validator::make($request->all(), [
@@ -336,6 +336,7 @@ class SupplierController extends Controller
 
     /**
      * get supplier in archive with: register,sales
+     * @param Request $request
      * @return JsonResponse
      */
     public function getArchivesSuppliers(Request $request): JsonResponse

@@ -60,9 +60,10 @@ class Controller extends BaseController
      * get the most_selling_products,
      * most_popular_clients,
      * most_popular_suppliers
-     * @return
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function monitoring(Request $request)
+    public function monitoring(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'repository_id' => 'required|exists:repositories,id',
@@ -98,7 +99,7 @@ class Controller extends BaseController
         $data['most_popular_clients'] = $this->getPopularClients(count($content->clients) > 5 ? 5 : count($content->clients), $content->clients);
         $data['latest_sale_invoices'] = $this->getLatestSaleInvoices(count($content->sales_invoices) > 5 ? 5 : count($content->sales_invoices), $content->sales_invoices);
         $data['latest_purchase_invoices'] = $this->getLatestPurchaseInvoices(count($content->purchases_invoices) > 5 ? 5 : count($content->purchases_invoices), $content->purchases_invoices);
-        $data['latest_expenses_invoices'] = $this->getLatestExpenses(count($content->expenses) > 5 ? 5 : count($content->expenses), $content->expenses);
+        $data['least_expenses'] = $this->getLatestExpenses(count($content->expenses) > 5 ? 5 : count($content->expenses), $content->expenses);
         $data['most_popular_suppliers'] = $this->getPopularSuppliers(count($content->suppliers) > 5 ? 5 : count($content->suppliers), $content->suppliers);
 
         return $this->success($data);
@@ -211,7 +212,7 @@ class Controller extends BaseController
                     }
                     $sort[$i] = $count_invoice;
                     $suppliers_sort[$i] = Supplier::select('id', 'name', 'photo')->find($suppliers[$p]->id);
-                    $suppliers_sort[$i]->photo = asset('assets/images/products/' . $suppliers[$p]->photo);
+                    $suppliers_sort[$i]->photo = asset('assets/images/suppliers/' . $suppliers[$p]->photo);
                     break;
                 }
             }
@@ -267,6 +268,8 @@ class Controller extends BaseController
             if ($products[$p]->amount < 10)
                 $least_products[$p] = $products[$p];
         }
+        if(count($least_products)==1)
+            return [$least_products];
         return $least_products;
 
     }

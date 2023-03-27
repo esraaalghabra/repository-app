@@ -16,7 +16,7 @@ class Client extends Model
     use HasFactory;
     use SoftDeletes;
     protected $guarded=[];
-    protected $hidden=['created_at','updated_at','repository_id','pivot'];
+    protected $hidden=['created_at','updated_at','deleted_at','repository_id','pivot'];
 
 
 //    protected function Photo(): Attribute{

@@ -14,25 +14,10 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    /**
-     * get categories
-     * @return JsonResponse
-     */
-    public function getCategories(Request $request): JsonResponse
-    {
-        $validator = Validator::make($request->all(), [
-            'repository_id' => 'required|exists:repositories,id',
-        ]);
-        if ($validator->fails())
-            return $this->error($validator->errors()->first());
-
-        $categories = Category::where('repository_id', $request->repository_id)->select('categories.id', 'name')->get();
-
-        return $this->success($categories);
-    }
 
     /**
      * get products with category name
+     * @param Request $request
      * @return JsonResponse
      */
     public function getAllProducts(Request $request): JsonResponse
@@ -142,7 +127,6 @@ class ProductController extends Controller
             'sale_price' => 'required|numeric',
             'measuring_unit' => 'required|string',
             'photo' => 'mimes:jpg,jpeg,png,jfif',
-
         ]);
         if ($validator->fails())
             return $this->error($validator->errors()->first());
@@ -170,11 +154,11 @@ class ProductController extends Controller
             ]);
         }
 
-        $register = ProductRegister::create([
-            'category_id' => $product->id,
+        ProductRegister::create([
+            'product_id' => $product->id,
             'user_id' => $request->user()->id,
             'name' => $product->name,
-            'type_operation' => 'update',
+            'type_operation' => 'edit',
         ]);
         return $this->success();
     }
@@ -201,7 +185,11 @@ class ProductController extends Controller
         return $this->success();
     }
 
-    public function GetProductRegister(Request $request)
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function GetProductRegister(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:products,id',
@@ -218,8 +206,11 @@ class ProductController extends Controller
         return $this->success($rigister);
     }
 
-
-    public function deleteProductRegister(Request $request)
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function deleteProductRegister(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:category_registers,id',

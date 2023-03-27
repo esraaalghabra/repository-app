@@ -148,11 +148,11 @@ class ClientController extends Controller
                 'photo' => $path[1]
             ]);
         }
-        $register = ClientRegister::create([
-            'category_id' => $client->id,
+        ClientRegister::create([
+            'client_id' => $client->id,
             'user_id' => $request->user()->id,
             'name' => $client->name,
-            'type_operation' => 'update',
+            'type_operation' => 'edit',
         ]);
         return $this->success();
     }
@@ -341,6 +341,7 @@ class ClientController extends Controller
 
     /**
      * get client in archive with: register,sales
+     * @param Request $request
      * @return JsonResponse
      */
     public function getArchivesClients(Request $request): JsonResponse
@@ -386,8 +387,11 @@ class ClientController extends Controller
         return $this->success($data);
     }
 
-
-    public function getClientRegister(Request $request)
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function getClientRegister(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:clients,id',

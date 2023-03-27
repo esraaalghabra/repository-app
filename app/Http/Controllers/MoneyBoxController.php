@@ -20,24 +20,14 @@ class MoneyBoxController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function getInvoicesRegisters(Request $request): JsonResponse
+    public function getPushOrPullRegisters(Request $request): JsonResponse
     {
-        if ($request->type_money == 'cash') {
-            $MoneyCache = MoneyBox::where('type_money', 'add_cash')->orWhere('type_money', 'withdrawal_cash')->get();
-            return $this->success($MoneyCache);
-        } elseif ($request->type_money == 'sales') {
-            $moneySales = MoneyBox::with(['saleInvoice' => function ($q) {
-                return $q->select('id', 'number', 'register_id');
-            }])->where('type_money', 'sales')->get();
-            return $this->success($moneySales);
-        } elseif ($request->type_money == 'purchases') {
-            $moneyPurchases = MoneyBox::with(['purchaseInvoice' => function ($q) {
-                return $q->select('id', 'number', 'register_id');
-            }])->where('type_money', 'purchases')->get();
-            return $this->success($moneyPurchases);
-        } elseif ($request->type_money == 'expenses') {
-            $moneyExpenses = MoneyBox::where('type_money', 'expenses')->get();
-            return $this->success($moneyExpenses);
+        if ($request->type_money == 'pushed') {
+            $MoneyPushCache = MoneyBox::where('type_money', 'add_cash')->where('repository_id',$request->repository_id)->get();
+            return $this->success($MoneyPushCache);
+        } elseif ($request->type_money == 'pulled') {
+            $moneyPullCache = MoneyBox::where('type_money', 'withdrawal_cash')->get();
+            return $this->success($moneyPullCache);
         } else
             return $this->error('you type_money not found');
     }
@@ -76,12 +66,11 @@ class MoneyBoxController extends Controller
             ]);
         }else{
             return $this->error('you must to added amount of money');
-
         }
         MoneyBoxRegister::create([
             'money_box_id' => $register->id,
             'user_id' => $request->user()->id,
-            'type_operation' => $register->type_money,
+            'type_operation' => 'add',
         ]);
         return $this->success();
 
@@ -122,14 +111,13 @@ class MoneyBoxController extends Controller
             return $this->error($validator->errors()->first());
         $register = MoneyBox::find($request->id);
         $register->update([
-            'type_money' => $request->type_money,
             'total_price' => $request->total_price,
             'date' => $request->date,
         ]);
         MoneyBoxRegister::create([
-            'client_id' => $register->id,
+            'money_box_id' => $register->id,
             'user_id' => $request->user()->id,
-            'type_operation' => $request->type_money,
+            'type_operation' => 'edit',
         ]);
         return $this->success();
     }

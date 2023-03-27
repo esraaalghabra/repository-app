@@ -24,7 +24,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::prefix('auth')->as('auth.')
     ->group(function (){
         Route::post('login',[UserController::class,'login'])->name('login');
@@ -33,7 +32,7 @@ Route::prefix('auth')->as('auth.')
         Route::post('login_with_token',[UserController::class,'loginWithToken'])
             ->middleware('auth:sanctum')
             ->name('login_with_token');
-        Route::post('logout',[UserController::class,'logout'])
+        Route::get('logout',[UserController::class,'logout'])
             ->middleware('auth:sanctum')
             ->name('logout');
         Route::post('add_info',[UserController::class,'addInfo'])
@@ -60,18 +59,17 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::controller(RepositoryController::class)->prefix('repository')->group(function () {
         Route::post('add_repository', 'addRepository');
-        Route::post('get_repository', 'getRepositories');
+        Route::get('get_repository', 'getRepositories');
         Route::post('update_repository', 'updateRepository');
         Route::post('check_delete_repository', 'checkDeleteRepository');
         Route::post('delete_repository', 'deleteRepository');
         Route::post('join_repository', 'joinRepository');
-        Route::post('get_repositories_for_user', 'getRepositoriesForUser');
+        Route::get('get_repositories_for_user', 'getRepositoriesForUser');
         Route::post('get_user_for_repository', 'getUsersForRepository');
     });
 
     Route::controller(ProductController::class)->prefix('product')->group(function () {
         Route::post('get_all_products', 'getAllProducts');
-        Route::post('get_categories', 'getCategories');
         Route::post('add_product', 'addProduct');
         Route::post('get_product', 'getProduct');
         Route::post('update_product', 'updateProduct');
@@ -109,13 +107,12 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('get_supplier', 'getSupplier');
         Route::post('update_supplier', 'updateSupplier');
         Route::post('delete_supplier', 'deleteSupplier');
+        Route::post('meet_debt', 'meetDebt');
         Route::post('add_to_archives_suppliers', 'addToArchivesSuppliers');
         Route::post('remove_to_archives_suppliers', 'removeFromArchivesSuppliers');
         Route::post('get_archives_suppliers', 'getArchivesSuppliers');
         Route::post('get_supplier_register', 'GetSupplierRegister');
         Route::post('delete_supplier_register', 'deleteSupplierRegister');
-
-
     });
 
     Route::controller(PurchaseInvoiceController::class)->prefix('purchase_invoice')->group(function () {
@@ -138,12 +135,10 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::controller(SaleInvoiceController::class)->prefix('sale_invoice')->group(function () {
-        Route::post('get_products_invoice', 'getProductsForInvoice');
         Route::post('get_sale_invoice_between_tow_date', 'getSalesInvoiceBetweenTowDate');
         Route::post('get_sale_invoice', 'getSaleInvoice');
         Route::post('get_all_sales_invoices', 'getAllSalesInvoices');
         Route::post('remove_to_archives_sale_invoice', 'removeToArchivesSaleInvoice');
-        Route::post('get_all_sales_invoices_earnings', 'getSalesInvoicesEarnings');
         Route::post('add_sale_invoice', 'addSaleInvoice');
         Route::post('update_sale_invoice', 'updateSaleInvoice');
         Route::post('delete_sale_invoice', 'deleteSaleInvoice');
@@ -169,7 +164,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::controller(MoneyBoxController::class)->prefix('register')->group(function () {
         Route::post('get_total_box', 'getTotalBox');
-        Route::post('get_invoices_registers', 'getInvoicesRegisters');
+        Route::post('get_push_or_pull_registers', 'getPushOrPullRegisters');
         Route::post('add_or_remove_cash', 'addOrRemoveCashMoney');
         Route::post('get_register_invoice', 'getRegisterInvoice');
         Route::post('update_register', 'updateRegister');
@@ -186,6 +181,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('client', 'stocktakingClient');
         Route::post('supplier', 'stocktakingSupplier');
         Route::post('all', 'stocktakingAll');
+        Route::post('get_categories', 'getCategories');
         Route::post('get_products', 'getProducts');
         Route::post('get_clients', 'getClients');
         Route::post('get_suppliers', 'getSuppliers');

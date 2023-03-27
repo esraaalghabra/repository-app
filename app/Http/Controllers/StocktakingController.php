@@ -125,7 +125,7 @@ class StocktakingController extends Controller
     public function stocktakingClient(Request $request): JsonResponse
     {
         $sum_of_sales = 0;
-        $money_reminder = 0;
+        $money_remained = 0;
         $money_paid = 0;
         $money_total = 0;
 
@@ -144,13 +144,13 @@ class StocktakingController extends Controller
             $sum_of_sales += $sale->amount;
         }
         foreach ($sales_invoices as $sale_invoice) {
-            $money_reminder += $sale_invoice->reminder;
+            $money_remained += $sale_invoice->remained;
             $money_paid += $sale_invoice->paid;
             $money_total += $sale_invoice->total_price;
         }
         $data['invoices_count'] = count($client->sales_invoices);
         $data['sales_amount'] = $sum_of_sales;
-        $data['debts'] = $money_reminder;
+        $data['debts'] = $money_remained;
         $data['paid'] = $money_paid;
         $data['invoices_total'] = $money_total;
         return $this->success($data);
@@ -164,7 +164,7 @@ class StocktakingController extends Controller
     public function stocktakingSupplier(Request $request): JsonResponse
     {
         $sum_of_purchase = 0;
-        $money_reminder = 0;
+        $money_remained = 0;
         $money_paid = 0;
         $money_total = 0;
 
@@ -183,13 +183,13 @@ class StocktakingController extends Controller
             $sum_of_purchase += $purchase->amount;
         }
         foreach ($purchases_invoices as $purchase_invoice) {
-            $money_reminder += $purchase_invoice->remained;
+            $money_remained += $purchase_invoice->remained;
             $money_paid += $purchase_invoice->paid;
             $money_total += $purchase_invoice->total_price;
         }
         $data['invoices_count'] = count($supplier->purchases_invoices);
         $data['purchase_amount'] = $sum_of_purchase;
-        $data['debts'] = $money_reminder;
+        $data['debts'] = $money_remained;
         $data['paid'] = $money_paid;
         $data['invoices_total'] = $money_total;
         return $this->success($data);
@@ -261,13 +261,13 @@ class StocktakingController extends Controller
         }
         $sale_invoices = SaleInvoice::get();
         foreach ($sale_invoices as $sale_invoice)
-            $debts_sales += $sale_invoice->reminder;
+            $debts_sales += $sale_invoice->remained;
         $purchase_invoices = PurchaseInvoice::get();
         foreach ($purchase_invoices as $purchase_invoice)
-            $debts_purchase += $purchase_invoice->reminder;
+            $debts_purchase += $purchase_invoice->remained;
         $expense_invoices = Expense::get();
         foreach ($expense_invoices as $expense_invoice)
-            $debts_expense += $expense_invoice->reminder;
+            $debts_expense += $expense_invoice->remained;
 
         $data['sales_amount'] = $sum_of_sales;
         $data['purchases_amount'] = $sum_of_purchases;
@@ -283,7 +283,6 @@ class StocktakingController extends Controller
         $data['debts_expenses'] = $debts_expense;
         return $this->success($data);
     }
-
 
     /**
      * stocktaking for all:
@@ -334,7 +333,7 @@ class StocktakingController extends Controller
             foreach ($purchases as $purchase) {
                 $sum_of_purchases += $purchase->amount;
                 $money_purchases += $purchase->total_purchase_price;
-                $profit_remnant += $sale->total_sale_price - $sale->total_purchase_price;
+                $profit_remnant += $purchase->total_sale_price - $purchase->total_purchase_price;
             }
         }
         $registers = MoneyBox::where('type_money', 'add_cash')->orWhere('type_money', 'withdrawal_cash')->orWhere('type_money', 'expenses')->whereBetween('date', [$request->start_date, $request->end_date])->get();
@@ -345,13 +344,13 @@ class StocktakingController extends Controller
         }
         $sale_invoices = $all_content->sales_invoices;
         foreach ($sale_invoices as $sale_invoice)
-            $debts_sales += $sale_invoice->reminder;
+            $debts_sales += $sale_invoice->remained;
         $purchase_invoices = $all_content->purchases_invoices;
         foreach ($purchase_invoices as $purchase_invoice)
-            $debts_purchase += $purchase_invoice->reminder;
+            $debts_purchase += $purchase_invoice->remained;
         $expense_invoices = $all_content->expenses;
         foreach ($expense_invoices as $expense_invoice)
-            $debts_expense += $expense_invoice->reminder;
+            $debts_expense += $expense_invoice->remained;
 
         $data['sales_amount'] = $sum_of_sales;
         $data['purchases_amount'] = $sum_of_purchases;
@@ -368,9 +367,27 @@ class StocktakingController extends Controller
         return $this->success($data);
     }
 
+    /**
+     * get categories
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function getCategories(Request $request): JsonResponse
+    {
+        $validator = Validator::make($request->all(), [
+            'repository_id' => 'required|exists:repositories,id',
+        ]);
+        if ($validator->fails())
+            return $this->error($validator->errors()->first());
+
+        $categories = Category::where('repository_id', $request->repository_id)->select('categories.id', 'name')->get();
+
+        return $this->success($categories);
+    }
 
     /**
      * get products names
+     * @param Request $request
      * @return JsonResponse
      */
     public function getProducts(Request $request): JsonResponse
@@ -390,6 +407,7 @@ class StocktakingController extends Controller
 
     /**
      * get clients names
+     * @param Request $request
      * @return JsonResponse
      */
     public function getClients(Request $request): JsonResponse
@@ -405,6 +423,7 @@ class StocktakingController extends Controller
 
     /**
      * get suppliers names
+     * @param Request $request
      * @return JsonResponse
      */
     public function getSuppliers(Request $request): JsonResponse

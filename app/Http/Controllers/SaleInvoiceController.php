@@ -136,7 +136,7 @@ class SaleInvoiceController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function updateSaleInvoice(Request $request): JsonResponse
+    public function updateSaleInvoice(Request $request)
     {
         try {
             $validator = Validator::make($request->all(), [
@@ -153,20 +153,19 @@ class SaleInvoiceController extends Controller
             DB::beginTransaction();
             $sale_invoice = SaleInvoice::where('id', $request->id)->first();
             $sale_invoice->update([
-                'repository_id' => 1,
                 'client_id' => $request->client_id,
                 'total_price' => $request->total_price,
                 'paid' => $request->paid,
                 'remained' => $request->remained,
                 'date' => $request->date,
             ]);
+
             $sales = json_decode($request->sales);
             foreach ($sale_invoice->sales as $sale) {
                 Sale::where('id', $sale->id)->delete();
             }
             foreach ($sales as $sale) {
                 Sale::create([
-                    'repository_id' => $request->user()->repositories->first()->id,
                     'product_id' => $sale->product_id,
                     'sale_invoice_id' => $sale_invoice->id,
                     'amount' => $sale->amount,
@@ -247,34 +246,6 @@ class SaleInvoiceController extends Controller
             }])
             ->whereBetween('date', [$request->start_date, $request->end_date])->get();
         return $this->success($SaleInvoice);
-    }
-
-    /**
-     * get total sales invoices earnings between tow date
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function getSalesInvoicesEarnings(Request $request): JsonResponse
-    {
-        $earning = 0;
-        $validator = Validator::make($request->all(), [
-            'start_date' => 'required',
-            'end_date' => 'required',
-        ]);
-        if ($validator->fails())
-            return $this->error($validator->errors()->first());
-
-        $SaleInvoices = SaleInvoice::with('sales')->whereBetween('date', [$request->start_date, $request->end_date])->get();
-        if (!$SaleInvoices) {
-            return $this->success();
-        } else {
-            foreach ($SaleInvoices as $SaleInvoice) {
-                $sales = $SaleInvoice->sales;
-                foreach ($sales as $sale)
-                    $earning += $sale->total_sale_price - $sale->total_purchase_price;
-            }
-            return $this->success($earning);
-        }
     }
 
     /**
@@ -396,24 +367,6 @@ class SaleInvoiceController extends Controller
             DB::rollback();
             return $this->error($e);
         }
-    }
-
-    /**
-     * get products with:name,sale_price,purchase_price,amount available
-     * @return JsonResponse
-     */
-    public function getProductsForInvoice(Request $request): JsonResponse
-    {
-        $validator = Validator::make($request->all(), [
-            'repository_id' => 'required|exists:repositories,id',
-        ]);
-        if ($validator->fails())
-            return $this->error($validator->errors()->first());
-
-        $products = Repository::with(['products' => function ($q) {
-            return $q->select('products.id', 'name', 'sale_price', 'purchase_price', 'amount');
-        }])->find($request->repository_id)->products;
-        return $this->success($products);
     }
 
     /**
