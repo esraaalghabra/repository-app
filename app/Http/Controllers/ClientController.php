@@ -27,7 +27,7 @@ class ClientController extends Controller
         ]);
         if ($validator->fails())
             return $this->error($validator->errors()->first());
-        $clients = Client::where('repository_id',$request->repository_id)->get();
+        $clients = Client::where('repository_id', $request->repository_id)->get();
         foreach ($clients as $client) {
             $client->photo = asset('assets/images/clients/' . $client->photo);
             $invoices = SaleInvoice::where('client_id', $client->id)->get();
@@ -352,7 +352,7 @@ class ClientController extends Controller
         if ($validator->fails())
             return $this->error($validator->errors()->first());
 
-        $clients = Client::where('repository_id',$request->repository_id)->onlyTrashed()->get();
+        $clients = Client::where('repository_id', $request->repository_id)->onlyTrashed()->get();
         if (!$clients)
             return $this->error();
         foreach ($clients as $client) {
@@ -373,10 +373,18 @@ class ClientController extends Controller
      */
     public function getArchiveClient(Request $request): JsonResponse
     {
+        $validator = Validator::make($request->all(), [
+            'id' => 'required|numeric|exists:clients,id',
+        ]);
+        if ($validator->fails()) {
+            return $this->error($validator->errors()->first());
+        }
         $client = Client::with(['sales_invoices' => function ($q) {
             return $q->onlyTrashed();
         }])
             ->onlyTrashed()->where('id', $request->id)->first();
+        if (!$client)
+            return $this->error('client not found in archive');
         $data = Client::onlyTrashed()->where('id', $request->id)->first();
         $d = $this->getTotalDebts($client->sales_invoices);
         $data['debts'] = $d['debts'];
@@ -400,13 +408,14 @@ class ClientController extends Controller
             return $this->error($validator->errors()->first());
         }
         $is_admin = RepositoryUser::where('user_id', $request->user()->id)->first();
-        if ($is_admin->is_admin!=1)
+        if ($is_admin->is_admin != 1)
             return $this->error('ypu can not see this register');
         $rigister = ClientRegister::with(['user' => function ($q) {
             return $q->select('id', 'name');
         }])->where('client_id', $request->id)->get();
         return $this->success($rigister);
     }
+
     public function deleteClientRegister(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -416,7 +425,7 @@ class ClientController extends Controller
             return $this->error($validator->errors()->first());
         }
         $is_admin = RepositoryUser::where('user_id', $request->user()->id)->first();
-        if ($is_admin->is_admin!=1)
+        if ($is_admin->is_admin != 1)
             return $this->error('ypu can not delete this register');
         ClientRegister::where('id', $request->id)->delete();
         return $this->success();
