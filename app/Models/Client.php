@@ -36,9 +36,9 @@ class Client extends Model
     /**
      * @return HasManyThrough
      */
-    public function sales():HasManyThrough
+    public function sales():HasMany
     {
-        return $this->hasManyThrough(Sale::class,SaleInvoice::class,'client_id','sale_invoice_id');
+        return $this->hasMany(Sale::class);
     }
 
     public function repository():BelongsTo

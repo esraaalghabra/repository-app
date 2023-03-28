@@ -158,9 +158,6 @@ class CategoryController extends Controller
         if ($validator->fails())
             return $this->error($validator->errors()->first());
         $category = Category::where('id', $request->id)->first();
-        $category->update([
-            'name' => $request->name,
-        ]);
         if ($request->has('photo')) {
             if ($category->photo != 'default_category.png') {
                 $image = public_path('assets\images\categories\\' . $category->photo);
@@ -173,6 +170,10 @@ class CategoryController extends Controller
                 'photo' => $path[1]
             ]);
         }
+        $category->update([
+            'name' => $request->name,
+        ]);
+
         CategoryRegister::create([
             'category_id' => $category->id,
             'user_id' => $request->user()->id,

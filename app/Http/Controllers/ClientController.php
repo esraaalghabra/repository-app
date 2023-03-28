@@ -51,7 +51,9 @@ class ClientController extends Controller
         ]);
         if ($validator->fails())
             return $this->error($validator->errors()->first());
-
+        $data = Client::where('id', $request->id)->first();
+        if (!$data)
+            return $this->error('client not found');
         $client = Client::with(['sales' => function ($q) {
             return $q->with(['product' => function ($q) {
                 return $q->select('products.id', 'name');
@@ -61,7 +63,6 @@ class ClientController extends Controller
         $d = $this->getTotalDebts($client->sales_invoices);
         $details['sales_invoices'] = $client->sales_invoices;
         $details['sales'] = $client->sales;
-        $data = Client::where('id', $request->id)->first();
         $data['photo'] = asset('assets/images/clients/' . $client->photo);
         $data['debts'] = $d['debts'];
         $data['invoices_total'] = $d['invoices_total'];
@@ -130,12 +131,8 @@ class ClientController extends Controller
             return $this->error($validator->errors()->first());
 
         $client = Client::where('id', $request->id)->first();
-
-        $client->update([
-            'name' => $request->name,
-            'phone_number' => $request->phone_number,
-            'address' => $request->address,
-        ]);
+        if (!$client)
+            return $this->error('client not found');
         if ($request->has('photo')) {
             if ($client->photo != 'default_client.png') {
                 $image = public_path('assets\images\clients\\' . $client->photo);
@@ -148,6 +145,12 @@ class ClientController extends Controller
                 'photo' => $path[1]
             ]);
         }
+        $client->update([
+            'name' => $request->name,
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+        ]);
+
         ClientRegister::create([
             'client_id' => $client->id,
             'user_id' => $request->user()->id,
@@ -170,6 +173,8 @@ class ClientController extends Controller
         if ($validator->fails())
             return $this->error($validator->errors()->first());
         $client = Client::where('id', $request->id)->first();
+        if (!$client)
+            return $this->error('client not found');
         if (count($client->sales_invoices) > 0)
             return $this->error('You cannot delete the client');
         if ($client->photo != 'default_client.png') {
@@ -205,7 +210,6 @@ class ClientController extends Controller
      */
     public function meetDebt(Request $request): JsonResponse
     {
-        $i = 0;
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:clients,id',
             'payment' => 'required|numeric'
@@ -213,6 +217,9 @@ class ClientController extends Controller
         if ($validator->fails())
             return $this->error($validator->errors()->first());
         $payment = $request->payment;
+        $client = Client::find($request->id);
+        if (!$client)
+            return $this->error('client not found');
         $client = Client::with(['sales_invoices' => function ($q) {
             return $q->select('id', 'client_id', 'paid', 'remained')->latest('date');
         }])->find($request->id);
@@ -381,6 +388,8 @@ class ClientController extends Controller
         }
         $client = Client::with(['sales_invoices' => function ($q) {
             return $q->onlyTrashed();
+        }])->with(['sales' => function ($q) {
+            return $q->onlyTrashed();
         }])
             ->onlyTrashed()->where('id', $request->id)->first();
         if (!$client)
@@ -390,6 +399,7 @@ class ClientController extends Controller
         $data['debts'] = $d['debts'];
         $data['invoices_total'] = $d['invoices_total'];
         $details['sales_invoices'] = $client->sales_invoices;
+        $details['sales'] = $client->sales;
         $data['details'] = $details;
         $data['photo'] = asset('assets/images/clients/' . $client->photo);
         return $this->success($data);

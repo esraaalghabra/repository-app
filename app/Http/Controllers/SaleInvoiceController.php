@@ -106,6 +106,7 @@ class SaleInvoiceController extends Controller
                     return $this->error('you have not amount enough of product ' . $product->name);
                 $sale = Sale::create([
                     'product_id' => $sale->product_id,
+                    'client_id' => $request->client_id,
                     'sale_invoice_id' => $Sale_invoice->id,
                     'amount' => $sale->amount,
                     'total_purchase_price' => $sale->total_purchase_price,

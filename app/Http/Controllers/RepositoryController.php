@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Repository;
 use App\Models\RepositoryUser;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -15,10 +16,13 @@ class RepositoryController extends Controller
         $this->middleware('auth:sanctum', ['except' => ['addRepository', 'joinRepository']]);
     }
 
-    public function getRepositories()
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function getRepositories(Request $request):JsonResponse
     {
-        $repositories = Repository::get();
-        return $this->success($repositories);
+        return $this->success($request->user()->repositories);
     }
 
     public function addRepository(Request $request)

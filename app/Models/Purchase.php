@@ -23,4 +23,8 @@ class Purchase extends Model
     {
             return $this->belongsTo(PurchaseInvoice::class,'purchase_invoice_id')->latest('updated_at');
     }
+    public function supplier():BelongsTo
+    {
+            return $this->belongsTo(Supplier::class,'supplier_id')->latest('updated_at');
+    }
 }
