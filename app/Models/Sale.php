@@ -25,4 +25,9 @@ class Sale extends Model
     {
         return $this->belongsTo(SaleInvoice::class,'sale_invoice_id')->latest('updated_at');
     }
+
+    public function client():BelongsTo
+    {
+        return $this->belongsTo(Client::class,'client_id')->latest('updated_at');
+    }
 }

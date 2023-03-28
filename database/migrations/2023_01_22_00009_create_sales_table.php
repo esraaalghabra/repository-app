@@ -19,6 +19,7 @@ return new class extends Migration
             $table->double('total_purchase_price');
             $table->double('total_sale_price');
             $table->date('date');
+            $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('product_id')->constrained('products')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('sale_invoice_id')->constrained('sales_invoices')->cascadeOnDelete()->cascadeOnUpdate();
             $table->softDeletes();

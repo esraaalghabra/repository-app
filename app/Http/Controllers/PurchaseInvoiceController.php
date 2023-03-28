@@ -106,6 +106,7 @@ class PurchaseInvoiceController extends Controller
             foreach ($purchases as $purchase) {
                 $purchase = Purchase::create([
                     'product_id' => $purchase->product_id,
+                    'supplier_id' => $request->supplier_id,
                     'purchase_invoice_id' => $purchase_invoice->id,
                     'amount' => $purchase->amount,
                     'date' => $request->date,

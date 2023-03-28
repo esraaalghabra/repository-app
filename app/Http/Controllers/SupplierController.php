@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MoneyBoxRegister;
+use App\Models\Purchase;
 use App\Models\PurchaseInvoice;
 use App\Models\Repository;
 use App\Models\RepositoryClient;
@@ -356,6 +357,7 @@ class SupplierController extends Controller
         foreach ($suppliers as $supplier) {
             $invoices = PurchaseInvoice::where('supplier_id', $supplier->id)->onlyTrashed()->get();
             $details = $this->getTotalDebts($invoices);
+            $supplier->photo = asset('assets/images/suppliers/' . $supplier->photo);
             $supplier->debts = $details['debts'];
             $supplier->invoices_total = $details['invoices_total'];
             $supplier->invoices_count = count($invoices);
@@ -369,7 +371,7 @@ class SupplierController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function getArchiveSupplier(Request $request): JsonResponse
+    public function getArchiveSupplier(Request $request):JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'id' => 'required|numeric|exists:suppliers,id',
@@ -378,6 +380,8 @@ class SupplierController extends Controller
             return $this->error($validator->errors()->first());
         }
         $supplier = Supplier::with(['purchases_invoices' => function ($q) {
+            return $q->onlyTrashed();
+        }])->with(['purchases' => function ($q) {
             return $q->onlyTrashed();
         }])
             ->onlyTrashed()->where('id', $request->id)->first();
@@ -388,6 +392,7 @@ class SupplierController extends Controller
         $data['debts'] = $d['debts'];
         $data['invoices_total'] = $d['invoices_total'];
         $details['purchases_invoices'] = $supplier->purchases_invoices;
+        $details['purchases'] = $supplier->purchases;
         $data['details'] = $details;
         $data['photo'] = asset('assets/images/clients/' . $supplier->photo);
         return $this->success($data);
@@ -404,7 +409,7 @@ class SupplierController extends Controller
         }
         $is_admin = RepositoryUser::where('user_id', $request->user()->id)->first();
         if ($is_admin->is_admin != 1)
-            return $this->error('ypu can not see this register');
+            return $this->error('you can not see this register');
         $rigister = SupplierRegister::with(['user' => function ($q) {
             return $q->select('id', 'name');
         }])->where('supplier_id', $request->id)->get();

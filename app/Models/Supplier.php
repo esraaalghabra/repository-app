@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Supplier extends Model
+class   Supplier extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -29,9 +29,9 @@ class Supplier extends Model
         return $this->hasMany(PurchaseInvoice::class,'supplier_id')->latest('updated_at');
     }
 
-    public function purchases():HasManyThrough
+    public function purchases():HasMany
     {
-        return $this->hasManyThrough(Purchase::class,PurchaseInvoice::class,'supplier_id','purchase_invoice_id');
+        return $this->hasMany(Purchase::class);
     }
 
     public function repository():BelongsTo

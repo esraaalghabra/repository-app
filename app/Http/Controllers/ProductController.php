@@ -103,7 +103,7 @@ class ProductController extends Controller
             ]);
         }
 
-        $register = ProductRegister::create([
+        ProductRegister::create([
             'product_id' => $product->id,
             'user_id' => $request->user()->id,
             'name' => $product->name,
@@ -134,13 +134,6 @@ class ProductController extends Controller
         if ($request->sale_price <= $request->purchase_price)
             return $this->error('You cannot sell the product for less than you bought it');
 
-        $product->update([
-            'name' => $request->name,
-            'category_id' => $request->category_id,
-            'purchase_price' => $request->purchase_price,
-            'sale_price' => $request->sale_price,
-            'measuring_unit' => $request->measuring_unit,
-        ]);
         if ($request->has('photo')) {
             if ($product->photo != 'default_product.png') {
                 $image = public_path('assets\images\products\\' . $product->photo);
@@ -153,6 +146,14 @@ class ProductController extends Controller
                 'photo' => $path[1]
             ]);
         }
+
+        $product->update([
+            'name' => $request->name,
+            'category_id' => $request->category_id,
+            'purchase_price' => $request->purchase_price,
+            'sale_price' => $request->sale_price,
+            'measuring_unit' => $request->measuring_unit,
+        ]);
 
         ProductRegister::create([
             'product_id' => $product->id,
