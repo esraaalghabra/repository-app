@@ -29,7 +29,7 @@ Route::prefix('auth')->as('auth.')
         Route::post('login',[UserController::class,'login'])->name('login');
 
         Route::post('register',[UserController::class,'register'])->name('register');
-        Route::get('login_with_token',[UserController::class,'loginWithToken'])
+        Route::post('login_with_token',[UserController::class,'loginWithToken'])
             ->middleware('auth:sanctum')
             ->name('login_with_token');
         Route::get('logout',[UserController::class,'logout'])
@@ -111,7 +111,6 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('add_to_archives_suppliers', 'addToArchivesSuppliers');
         Route::post('remove_to_archives_suppliers', 'removeFromArchivesSuppliers');
         Route::post('get_archives_suppliers', 'getArchivesSuppliers');
-        Route::post('get_archive_supplier', 'getArchiveSupplier');
         Route::post('get_supplier_register', 'GetSupplierRegister');
         Route::post('delete_supplier_register', 'deleteSupplierRegister');
     });
