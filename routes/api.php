@@ -29,7 +29,7 @@ Route::prefix('auth')->as('auth.')
         Route::post('login',[UserController::class,'login'])->name('login');
 
         Route::post('register',[UserController::class,'register'])->name('register');
-        Route::post('login_with_token',[UserController::class,'loginWithToken'])
+        Route::get('login_with_token',[UserController::class,'loginWithToken'])
             ->middleware('auth:sanctum')
             ->name('login_with_token');
         Route::get('logout',[UserController::class,'logout'])

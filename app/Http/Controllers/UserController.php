@@ -88,6 +88,13 @@ class UserController extends Controller
     }
 
     /**
+     * @return JsonResponse
+     */
+    public function loginWithToken():JsonResponse
+    {
+        return $this->success(auth()->user(),'Login successfully');
+    }
+    /**
      * @param Request $request
      * @return JsonResponse
      */
