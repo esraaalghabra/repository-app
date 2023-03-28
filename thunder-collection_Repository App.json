@@ -1,0 +1,3190 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Repository App",
+    "dateExported": "2023-03-28T06:29:45.324Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2023-03-27T09:24:01.491Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "repositry",
+            "containerId": "",
+            "created": "2023-03-27T09:24:01.493Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "name": "Home",
+            "containerId": "",
+            "created": "2023-03-27T09:24:01.494Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Category",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.495Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Product",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.496Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Client",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.497Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Supplier",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.498Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Managment Money Box",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.502Z",
+            "sortNum": 75000
+        },
+        {
+            "_id": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Purchase Invoice",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.499Z",
+            "sortNum": 80000
+        },
+        {
+            "_id": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Sale Invoice",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.500Z",
+            "sortNum": 90000
+        },
+        {
+            "_id": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Expenses",
+            "containerId": "427508f3-71ab-48d3-b80b-3989dce04ef4",
+            "created": "2023-03-27T09:24:01.501Z",
+            "sortNum": 100000
+        },
+        {
+            "_id": "da468c9d-3994-4ed0-80e9-e21fb24ad3cb",
+            "name": "Monitoring",
+            "containerId": "",
+            "created": "2023-03-27T09:24:01.503Z",
+            "sortNum": 120000
+        },
+        {
+            "_id": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocktaking",
+            "containerId": "",
+            "created": "2023-03-27T09:24:01.504Z",
+            "sortNum": 130000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "3a008418-9a2e-44ea-aaa5-024810cffb46",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "Register",
+            "url": "auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-27T09:24:01.492Z",
+            "modified": "2023-03-28T01:37:47.733Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdXNlci9sb2dpbiIsImlhdCI6MTY3MzE3OTE5NCwiZXhwIjoxNjg4Nzc5MTk0LCJuYmYiOjE2NzMxNzkxOTQsImp0aSI6IkRENTFOMGpRNUw3dDVORDYiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2kh0jJfs8gm9NMcGes2ejG9wt4PPpN7K5Jc6wg_VC10"
+                }
+            ],
+            "params": [
+                {
+                    "name": "token",
+                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTU5NDUwNywiZXhwIjoxNjY1NTk4MTA3LCJuYmYiOjE2NjU1OTQ1MDcsImp0aSI6InA5UXA1NTZuMnh0YnFqMVoiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sxiN_lXQl0ksHrKPYMn_aKTtSwyef0P1oGya-t5dbN8",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "esraa"
+                    },
+                    {
+                        "name": "email",
+                        "value": "esraa@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123456789"
+                    },
+                    {
+                        "name": "password_confirmation",
+                        "value": "123456789"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "56aeb7cd-a44a-46d7-ae64-c62271d0f053",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "Login",
+            "url": "auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-27T09:24:01.493Z",
+            "modified": "2023-03-28T02:17:38.241Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "wael@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123456332211"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c1f0529c-b695-4090-811a-a4a97aec5e95",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "Login Copy",
+            "url": "auth/login_with_token",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-03-28T06:23:08.640Z",
+            "modified": "2023-03-28T06:24:58.857Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "wael@gmail.com",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "password",
+                        "value": "123456332211",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ddc61b60-4093-4082-98ea-baa69d41bc21",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "Logout",
+            "url": "auth/logout",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-27T09:24:01.495Z",
+            "modified": "2023-03-27T19:57:53.573Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer 1|wwqrI5qWpv5dRhiWrxofWXHyYtZMPN9SHVQUHEbo"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2e983cb5-40de-45c5-bacf-2a029c4d2bd4",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9f4f9a7e-3fa8-430e-a892-82cb2b62b110",
+            "name": "AddInfo",
+            "url": "auth/add_info",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-03-27T09:24:01.496Z",
+            "modified": "2023-03-28T01:58:25.792Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer 6|tVD63aV3Dxzoh7TORS4QZrDQ990msvYZZR6GwmzH",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "esraa1"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\تطبيقات\\صور\\im2.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "af83d91e-4423-4245-ab45-312537ab7299",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Add Repository",
+            "url": "repository/add_repository",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-03-27T09:24:01.497Z",
+            "modified": "2023-03-28T02:06:09.366Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "food"
+                    },
+                    {
+                        "name": "address",
+                        "value": "doma"
+                    },
+                    {
+                        "name": "code",
+                        "value": "1234567"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5675d114-a97d-427a-b026-611c8e26ccf1",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Get Repositories",
+            "url": "repository/get_repository",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-03-27T09:24:01.498Z",
+            "modified": "2023-03-27T17:27:00.015Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "85acb697-f951-4e5e-a125-2f926d5cd53f",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Update Repositry",
+            "url": "repository/update_repository",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-03-27T09:24:01.499Z",
+            "modified": "2023-03-27T09:24:01.499Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "name",
+                        "value": "sss"
+                    },
+                    {
+                        "name": "address",
+                        "value": "zhdcv"
+                    },
+                    {
+                        "name": "code",
+                        "value": "123456"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8cdec903-fbc7-4006-b115-c879dc9b4904",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Delete Repositry",
+            "url": "repository/delete_repository",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-03-27T09:24:01.500Z",
+            "modified": "2023-03-27T09:24:01.500Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "2|x9wwP9kWs3JAN9WEUH8vUNgQSUtqRzcuZQBdekFK"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f93f1c0-51d5-413a-8923-1772821d2532",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Join Repository",
+            "url": "repository/join_repository",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-03-27T09:24:01.501Z",
+            "modified": "2023-03-28T02:02:44.556Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "code",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8b9839b5-c8c0-4da9-a31e-1fd8528b1ddb",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Get Repository For User",
+            "url": "repository/get_repositories_for_user",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-03-27T09:24:01.502Z",
+            "modified": "2023-03-27T19:58:56.665Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2abbb3c4-7eba-4b2c-891a-743bb588a1f2",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "ad89342f-9d9a-490f-91e7-fe2fc1c043ae",
+            "name": "Get Users For Repository",
+            "url": "repository/get_user_for_repository",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-03-27T09:24:01.503Z",
+            "modified": "2023-03-27T09:25:32.833Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5ff58992-b63b-40d4-9ad3-999bba94f506",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Get Categories",
+            "url": "category/get_all_categories",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-03-27T09:24:01.504Z",
+            "modified": "2023-03-28T02:08:53.706Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9d09ab88-fd27-4994-8892-d866290b6be5",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Add Category",
+            "url": "category/add_category",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-03-27T09:24:01.505Z",
+            "modified": "2023-03-28T02:08:13.034Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "ahmed"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "/C:/Users/ASUS/Pictures/تطبيقات/صور بدون خلفية/boots_1.png",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f7299ee9-0a1a-408f-99ce-a315a71b024f",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Update Category",
+            "url": "category/update_category",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2023-03-27T09:24:01.506Z",
+            "modified": "2023-03-28T02:15:34.543Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "4"
+                    },
+                    {
+                        "name": "name",
+                        "value": "rrr"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\تطبيقات\\صور\\im2.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5283510b-bd72-4dfc-9d1e-80f248698696",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Delete Category",
+            "url": "category/delete_category",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-03-27T09:24:01.507Z",
+            "modified": "2023-03-28T02:16:28.458Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "4"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f71d6107-d074-4cf4-afb6-76f0ef6c3bef",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Get Gategory",
+            "url": "category/get_category",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-03-27T09:24:01.508Z",
+            "modified": "2023-03-28T02:16:51.132Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "008fbbe5-0986-4e1b-aca1-9980a69c6268",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Get Registers",
+            "url": "category/get_category_register",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2023-03-27T09:24:01.509Z",
+            "modified": "2023-03-28T02:17:02.198Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b12acb42-4914-45cd-ac01-5f0a7e4d3a78",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Get Products",
+            "url": "product/get_all_products",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2023-03-27T09:24:01.510Z",
+            "modified": "2023-03-28T02:28:30.452Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3caf350f-4f1e-40b4-bade-acf980ea480c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Add Product",
+            "url": "product/add_product",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-03-27T09:24:01.511Z",
+            "modified": "2023-03-28T02:28:38.654Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "qqqq"
+                    },
+                    {
+                        "name": "category_id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "purchase_price",
+                        "value": "90"
+                    },
+                    {
+                        "name": "sale_price",
+                        "value": "200"
+                    },
+                    {
+                        "name": "measuring_unit",
+                        "value": "kg"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\تطبيقات\\صور\\im4.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "92dc8b33-7c09-4216-9c9c-edae0cacaa9e",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Update Product",
+            "url": "product/update_product",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2023-03-27T09:24:01.512Z",
+            "modified": "2023-03-28T02:27:40.110Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "name",
+                        "value": "sss"
+                    },
+                    {
+                        "name": "category_id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "purchase_price",
+                        "value": "200"
+                    },
+                    {
+                        "name": "sale_price",
+                        "value": "300"
+                    },
+                    {
+                        "name": "amount",
+                        "value": "333"
+                    },
+                    {
+                        "name": "measuring_unit",
+                        "value": "hvc"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\تطبيقات\\UI\\checkout.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "93e5d9cb-17e0-4723-ada2-d8f5855d8e5b",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Delete Product",
+            "url": "product/delete_product",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2023-03-27T09:24:01.513Z",
+            "modified": "2023-03-28T02:28:18.133Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ffcb6d91-ec38-4c72-99e9-366930c280cb",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Get Product",
+            "url": "product/get_product",
+            "method": "POST",
+            "sortNum": 220000,
+            "created": "2023-03-27T09:24:01.515Z",
+            "modified": "2023-03-28T02:30:06.180Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2cad4054-a142-497b-b407-4dceccadf206",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Get Categories",
+            "url": "stocktaking/get_categories",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2023-03-27T09:24:01.516Z",
+            "modified": "2023-03-28T02:32:43.539Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4e80a119-3aa0-41b6-a990-df10e4f8c45b",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Get All Clients",
+            "url": "client/get_all_clients",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2023-03-27T09:24:01.517Z",
+            "modified": "2023-03-27T09:27:38.974Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d425ae9e-0ad2-417f-9b65-c22801cc3342",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Get Registers",
+            "url": "product/get_product_register",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2023-03-27T09:24:01.518Z",
+            "modified": "2023-03-28T02:33:54.749Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ba4fd98e-dce5-431e-ac27-8dda6ef6e667",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Add Client",
+            "url": "client/add_client",
+            "method": "POST",
+            "sortNum": 250000,
+            "created": "2023-03-27T09:24:01.519Z",
+            "modified": "2023-03-28T02:35:03.046Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "osama"
+                    },
+                    {
+                        "name": "phone_number",
+                        "value": "1234567824"
+                    },
+                    {
+                        "name": "address",
+                        "value": "esraa"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\Camera Roll\\حافلة المدرسة.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "329a6a32-0d1a-4971-921a-eb9d4a056e5c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "9d55f5cb-2f0d-4380-abc0-1a7e40fa1197",
+            "name": "Delete Register",
+            "url": "product/delete_product_register",
+            "method": "POST",
+            "sortNum": 250000,
+            "created": "2023-03-27T09:24:01.520Z",
+            "modified": "2023-03-28T02:34:27.058Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "6"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a051ccd6-ab07-428f-a7b5-e79ed116bae9",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Update Client",
+            "url": "client/update_client",
+            "method": "POST",
+            "sortNum": 260000,
+            "created": "2023-03-27T09:24:01.521Z",
+            "modified": "2023-03-28T02:40:16.634Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "name",
+                        "value": "aaaaaa"
+                    },
+                    {
+                        "name": "phone_number",
+                        "value": "113344556667"
+                    },
+                    {
+                        "name": "address",
+                        "value": "cdcvvdd"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\تطبيقات\\صور\\im6.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "81ca56fa-918c-4d9e-bd4e-9a10c849edee",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Delete Client",
+            "url": "client/delete_client",
+            "method": "POST",
+            "sortNum": 270000,
+            "created": "2023-03-27T09:24:01.522Z",
+            "modified": "2023-03-28T02:40:31.615Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b8359d65-8b7a-4144-9c0d-1ca054ec9420",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Get Client",
+            "url": "client/get_client",
+            "method": "POST",
+            "sortNum": 280000,
+            "created": "2023-03-27T09:24:01.523Z",
+            "modified": "2023-03-28T02:43:48.016Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "638540c2-16be-46a5-bae0-8ef57a299987",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Meet Debt",
+            "url": "client/meet_debt",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2023-03-27T09:24:01.524Z",
+            "modified": "2023-03-28T02:46:23.947Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "payment",
+                        "value": "0"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4e8df2b8-aab3-4d57-9dcd-85c22c842a8c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Add Client To Archives",
+            "url": "client/add_to_archives_clients",
+            "method": "POST",
+            "sortNum": 300000,
+            "created": "2023-03-27T09:24:01.525Z",
+            "modified": "2023-03-27T19:39:48.532Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fe9350ca-4101-4e32-a796-1025eaedf16e",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Remove Client From Archive",
+            "url": "client/remove_to_archives_clients",
+            "method": "POST",
+            "sortNum": 310000,
+            "created": "2023-03-27T09:24:01.526Z",
+            "modified": "2023-03-28T02:47:29.825Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4c46305-f388-4ae4-85e4-dfd468d6f0e6",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Get Archives Clients",
+            "url": "client/get_archives_clients",
+            "method": "POST",
+            "sortNum": 320000,
+            "created": "2023-03-27T09:24:01.527Z",
+            "modified": "2023-03-28T02:48:16.462Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "931f5337-6e2a-4e6a-bec5-f1cd40fa24e3",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Get Archive Client",
+            "url": "client/get_archive_client",
+            "method": "POST",
+            "sortNum": 330000,
+            "created": "2023-03-27T09:24:01.528Z",
+            "modified": "2023-03-27T09:35:56.710Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d018418c-3444-4b8b-9ce5-4b5c0626360a",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Get All Suppliers",
+            "url": "supplier/get_all_suppliers",
+            "method": "POST",
+            "sortNum": 340000,
+            "created": "2023-03-27T09:24:01.529Z",
+            "modified": "2023-03-27T09:29:52.882Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c4a51fb6-e939-475a-bbf1-23d9c95f0099",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Get Register",
+            "url": "client/get_client_register",
+            "method": "POST",
+            "sortNum": 340000,
+            "created": "2023-03-27T09:24:01.530Z",
+            "modified": "2023-03-28T02:49:25.472Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f3a36562-6f73-4be9-be24-f9a37b010a7c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Add Supplier",
+            "url": "supplier/add_supplier",
+            "method": "POST",
+            "sortNum": 350000,
+            "created": "2023-03-27T09:24:01.531Z",
+            "modified": "2023-03-28T02:53:39.207Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "esraa0"
+                    },
+                    {
+                        "name": "phone_number",
+                        "value": "222222222283"
+                    },
+                    {
+                        "name": "address",
+                        "value": "xcxcxccxxcc"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "/D:/My_Files/private/DICM/صور سيارات/FB_IMG_1616521464144.jpg",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ca5a9de2-2008-437e-aa8f-cf1d41b41f8f",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0c4f02a6-e9ec-46c5-b075-7fde3d6b790f",
+            "name": "Delete Register",
+            "url": "client/delete_client_register",
+            "method": "POST",
+            "sortNum": 350000,
+            "created": "2023-03-27T09:24:01.532Z",
+            "modified": "2023-03-28T02:50:10.393Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "8"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a032f857-2d08-471a-baca-5b67ee4b9106",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Update Supplier",
+            "url": "supplier/update_supplier",
+            "method": "POST",
+            "sortNum": 360000,
+            "created": "2023-03-27T09:24:01.533Z",
+            "modified": "2023-03-28T02:53:18.933Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "name",
+                        "value": "qwerto"
+                    },
+                    {
+                        "name": "phone_number",
+                        "value": "1234567898"
+                    },
+                    {
+                        "name": "address",
+                        "value": "dfdfdfdf"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ASUS\\Pictures\\istockphoto-1206869528-612x612.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c12db65-0f3e-4bff-94bc-faa284fb122f",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Delete Supplier",
+            "url": "supplier/delete_supplier",
+            "method": "POST",
+            "sortNum": 370000,
+            "created": "2023-03-27T09:24:01.534Z",
+            "modified": "2023-03-28T02:53:49.385Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "efae75a4-f96a-4762-83ee-c32d952271b6",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Get Supplier",
+            "url": "supplier/get_supplier",
+            "method": "POST",
+            "sortNum": 380000,
+            "created": "2023-03-27T09:24:01.535Z",
+            "modified": "2023-03-28T02:54:23.793Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8bb1328-3b95-425b-8fb6-3b8dab28908a",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Meet Debt",
+            "url": "supplier/meet_debt",
+            "method": "POST",
+            "sortNum": 390000,
+            "created": "2023-03-27T09:24:01.536Z",
+            "modified": "2023-03-28T02:55:29.764Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "payment",
+                        "value": "200000000"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1afae5e4-c151-4f52-93d4-bd21b4c90418",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Add Supplier to Archive",
+            "url": "supplier/add_to_archives_suppliers",
+            "method": "POST",
+            "sortNum": 400000,
+            "created": "2023-03-27T09:24:01.537Z",
+            "modified": "2023-03-27T19:40:54.704Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "dc7cd0ea-8f51-4b81-9340-088b753124dc",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Remove Supplier From Archives",
+            "url": "supplier/remove_to_archives_suppliers",
+            "method": "POST",
+            "sortNum": 410000,
+            "created": "2023-03-27T09:24:01.538Z",
+            "modified": "2023-03-27T09:24:01.538Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "dab0956d-497d-4f48-a04c-375c0e3e6dfc",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Get Suppliers Archives",
+            "url": "supplier/get_archives_suppliers",
+            "method": "POST",
+            "sortNum": 420000,
+            "created": "2023-03-27T09:24:01.539Z",
+            "modified": "2023-03-27T09:24:01.539Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e0bda47b-ae3c-4421-9bde-9d3e35231f7e",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Get Archive Supplier",
+            "url": "supplier/get_archive_supplier",
+            "method": "POST",
+            "sortNum": 425000,
+            "created": "2023-03-27T09:30:57.860Z",
+            "modified": "2023-03-27T19:41:01.618Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f7859096-9837-4c6f-8a0c-50de6f1f18bb",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Invoices",
+            "url": "purchase_invoice/get_all_purchases_invoices",
+            "method": "POST",
+            "sortNum": 430000,
+            "created": "2023-03-27T09:24:01.540Z",
+            "modified": "2023-03-27T17:35:50.215Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9b7c9aec-abec-412e-9505-c0a2cd7a58ae",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Get Register",
+            "url": "supplier/get_supplier_register",
+            "method": "POST",
+            "sortNum": 430000,
+            "created": "2023-03-27T09:24:01.541Z",
+            "modified": "2023-03-27T09:41:38.313Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ceda406-536a-485f-b8e5-ecae698ae94e",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Add Invoice",
+            "url": "purchase_invoice/add_purchase_invoice",
+            "method": "POST",
+            "sortNum": 440000,
+            "created": "2023-03-27T09:24:01.542Z",
+            "modified": "2023-03-27T19:36:21.607Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"supplier_id\":1,\n    \"total_price\":490000,\n    \"paid\":520000,\n    \"date\":\"1999-1-1\",\n     \"number\":1,\n    \"remained\":30000,\n    \"purchases\": \"[{\\\"product_id\\\": 1,\\\"amount\\\":5,\\\"total_purchase_price\\\": 500000,\\\"total_sale_price\\\":550000} ]\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "faec8c49-be69-432a-ba35-9681276bbcb3",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "602a371b-12a1-42ea-a24e-84444dafdd28",
+            "name": "Delete Register",
+            "url": "supplier/delete_supplier_register",
+            "method": "POST",
+            "sortNum": 440000,
+            "created": "2023-03-27T09:24:01.543Z",
+            "modified": "2023-03-28T02:56:03.224Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a370a67c-6241-440c-8eb7-4f6108e1e09a",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Update Invoice",
+            "url": "purchase_invoice/update_purchase_invoice",
+            "method": "POST",
+            "sortNum": 450000,
+            "created": "2023-03-27T09:24:01.544Z",
+            "modified": "2023-03-27T09:24:01.544Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\":1,\n   \"supplier_id\":1,\n    \"total_price\":60100,\n    \"paid\":60000,\n    \"date\":\"2000-1-1\",\n    \"remained\":100,\n    \"purchases\": \"[{\\\"product_id\\\": 1,\\\"amount\\\": 2000,\\\"total_purchase_price\\\": 9000,\\\"total_sale_price\\\":10000} ]\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "24e12923-0547-43b1-9201-81f7a207ffea",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Delete Invoice",
+            "url": "purchase_invoice/delete_purchase_invoice",
+            "method": "POST",
+            "sortNum": 460000,
+            "created": "2023-03-27T09:24:01.545Z",
+            "modified": "2023-03-27T09:24:01.545Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6c62e556-59fb-4d2c-84c5-6ddf6e374022",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Invoices Between Tow Date",
+            "url": "purchase_invoice/get_purchases_invoices_between_tow_date",
+            "method": "POST",
+            "sortNum": 470000,
+            "created": "2023-03-27T09:24:01.546Z",
+            "modified": "2023-03-27T09:24:01.546Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "start_date",
+                        "value": "2000-1-1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2070-1-1"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9ab202a6-006b-4a5c-8da0-9150093c9458",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Add To Archives Invoice",
+            "url": "purchase_invoice/add_to_archives_purchase_invoice",
+            "method": "POST",
+            "sortNum": 480000,
+            "created": "2023-03-27T09:24:01.547Z",
+            "modified": "2023-03-27T09:24:01.547Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9b3bff5b-6230-4579-899c-488926600514",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Archives Invoices",
+            "url": "purchase_invoice/get_archives_purchases_invoices",
+            "method": "POST",
+            "sortNum": 490000,
+            "created": "2023-03-27T09:24:01.548Z",
+            "modified": "2023-03-27T09:24:01.548Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a64b58f7-5f51-4615-97a1-bd942b835f7a",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Invoice",
+            "url": "purchase_invoice/get_purchase_invoice",
+            "method": "POST",
+            "sortNum": 500000,
+            "created": "2023-03-27T09:24:01.549Z",
+            "modified": "2023-03-27T09:24:01.549Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|14oSQDUxNPqXFFZoorhl1I3i8nDNGz1wmPl4xaDK"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0068b8e5-78f1-4816-8093-19474a78d015",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Remove From Archives Purchase Invoice",
+            "url": "purchase_invoice/remove_to_archives_purchase_invoice",
+            "method": "POST",
+            "sortNum": 510000,
+            "created": "2023-03-27T09:24:01.550Z",
+            "modified": "2023-03-27T09:24:01.550Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "229dcc74-45de-4c33-afd8-ee685306cdf7",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Products For Invoice",
+            "url": "purchase_invoice/get_products_invoice",
+            "method": "POST",
+            "sortNum": 520000,
+            "created": "2023-03-27T09:24:01.551Z",
+            "modified": "2023-03-27T09:24:01.551Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "431594e0-8877-44cf-bad5-b8ceb4b3978d",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Archives Invoices",
+            "url": "purchase_invoice/get_archive_purchases_invoice",
+            "method": "POST",
+            "sortNum": 530000,
+            "created": "2023-03-27T09:24:01.552Z",
+            "modified": "2023-03-27T09:24:01.552Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a85438ab-c463-4c4d-88d8-147467a8c65c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Invoices",
+            "url": "sale_invoice/get_all_sales_invoices",
+            "method": "POST",
+            "sortNum": 540000,
+            "created": "2023-03-27T09:24:01.553Z",
+            "modified": "2023-03-27T09:24:01.553Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|14oSQDUxNPqXFFZoorhl1I3i8nDNGz1wmPl4xaDK"
+            },
+            "tests": []
+        },
+        {
+            "_id": "49bb55c1-a58c-40d8-8c1e-54eec3f1ff48",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Add Invoice",
+            "url": "sale_invoice/add_sale_invoice",
+            "method": "POST",
+            "sortNum": 550000,
+            "created": "2023-03-27T09:24:01.555Z",
+            "modified": "2023-03-27T19:36:45.264Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"client_id\":1,\n    \"total_price\":110000,\n    \"paid\":100000,\n    \"number\":2,\n    \"date\":\"1333-05-03\",\n    \"remained\":10000,\n    \"sales\": \"[{\\\"product_id\\\":1,\\\"amount\\\": 2,\\\"total_purchase_price\\\": 100000,\\\"total_sale_price\\\":110000}]\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ff32553b-17fe-4015-b89f-7784de96dd77",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Update Invoice",
+            "url": "sale_invoice/update_sale_invoice",
+            "method": "POST",
+            "sortNum": 560000,
+            "created": "2023-03-27T09:24:01.556Z",
+            "modified": "2023-03-27T09:24:01.556Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\":1,\n    \"client_id\":1,\n    \"total_price\":250,\n    \"paid\":300,\n    \"date\":\"2025-05-03\",\n    \"remained\":100,\n    \"sales\": \"[{\\\"product_id\\\": 1,\\\"amount\\\": 50,\\\"total_purchase_price\\\": 250,\\\"total_sale_price\\\":50}]\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "85aa3e46-d6d2-4478-8430-384578cda2da",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Delete Invoice",
+            "url": "sale_invoice/delete_sale_invoice",
+            "method": "POST",
+            "sortNum": 570000,
+            "created": "2023-03-27T09:24:01.557Z",
+            "modified": "2023-03-27T09:24:01.557Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ecc4250d-4513-4cf4-b776-2c50b9c2760c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Invoice In Date",
+            "url": "sale_invoice/get_sale_invoice_between_tow_date",
+            "method": "POST",
+            "sortNum": 580000,
+            "created": "2023-03-27T09:24:01.558Z",
+            "modified": "2023-03-27T09:24:01.558Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "start_date",
+                        "value": "2000-05-03"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2030-05-03"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "7e7a805d-9138-4afc-ba97-edf5e722e468",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Invoices Earnings",
+            "url": "sale_invoice/get_all_sales_invoices_earnings",
+            "method": "POST",
+            "sortNum": 590000,
+            "created": "2023-03-27T09:24:01.559Z",
+            "modified": "2023-03-27T09:24:01.559Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "start_date",
+                    "value": "2022-02-03",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "start_date",
+                    "value": "2024-02-03",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "start_date",
+                        "value": "2022-02-03"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2029-05-03"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "98564bc7-9120-446e-b068-b396ac768320",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Add To Archives Invoice",
+            "url": "sale_invoice/add_to_archives_sale_invoice",
+            "method": "POST",
+            "sortNum": 600000,
+            "created": "2023-03-27T09:24:01.560Z",
+            "modified": "2023-03-27T09:24:01.560Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|k9qyXZoIwDHfrzsm94Mef0k0gMdhotoXeX9EM7d4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7fed6051-f9ec-4069-87a2-c34b26dd3e39",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Archives Invoices",
+            "url": "sale_invoice/get_archives_sales_invoices",
+            "method": "POST",
+            "sortNum": 610000,
+            "created": "2023-03-27T09:24:01.561Z",
+            "modified": "2023-03-27T09:24:01.561Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "15bfb9aa-029d-4c20-a2ab-570bd397cafa",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Invoice",
+            "url": "sale_invoice/get_sale_invoice",
+            "method": "POST",
+            "sortNum": 620000,
+            "created": "2023-03-27T09:24:01.562Z",
+            "modified": "2023-03-27T09:24:01.562Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2c3fb334-e2a0-4ab6-92c1-342196268a47",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Remove From Archives Sale Invoice",
+            "url": "sale_invoice/remove_to_archives_sale_invoice",
+            "method": "POST",
+            "sortNum": 630000,
+            "created": "2023-03-27T09:24:01.563Z",
+            "modified": "2023-03-27T09:24:01.563Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "72ae1fc4-8a5f-40f3-b0c0-9cc9e013be7f",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Products For Invoice",
+            "url": "sale_invoice/get_products_invoice",
+            "method": "POST",
+            "sortNum": 640000,
+            "created": "2023-03-27T09:24:01.564Z",
+            "modified": "2023-03-27T09:24:01.564Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "dc030bfe-45c4-49eb-ba2f-b46bb7c0b3a6",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Archive Invoice",
+            "url": "sale_invoice/get_archive_sales_invoice",
+            "method": "POST",
+            "sortNum": 650000,
+            "created": "2023-03-27T09:24:01.565Z",
+            "modified": "2023-03-27T09:24:01.565Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8989d81e-bd55-41de-a413-76a6bb496bf5",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Get Expenses",
+            "url": "expense/get_all_expenses",
+            "method": "POST",
+            "sortNum": 660000,
+            "created": "2023-03-27T09:24:01.566Z",
+            "modified": "2023-03-27T09:24:01.566Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8776ce59-0b3b-4187-b952-b8727b58a17d",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Get Sale Invoice Register",
+            "url": "sale_invoice/get_sale_invoice_register",
+            "method": "POST",
+            "sortNum": 660000,
+            "created": "2023-03-27T09:24:01.567Z",
+            "modified": "2023-03-27T09:24:01.567Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "331bcf4f-e57a-427b-a711-106cf952ebfc",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Add Expense",
+            "url": "expense/add_expense",
+            "method": "POST",
+            "sortNum": 670000,
+            "created": "2023-03-27T09:24:01.568Z",
+            "modified": "2023-03-27T19:37:11.267Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "zxzxzxzx"
+                    },
+                    {
+                        "name": "total_price",
+                        "value": "1000"
+                    },
+                    {
+                        "name": "paid",
+                        "value": "900"
+                    },
+                    {
+                        "name": "date",
+                        "value": "2099-1-1"
+                    },
+                    {
+                        "name": "remained",
+                        "value": "100"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9d438e20-daa4-479d-bb25-77ab9522d84b",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Delete Register",
+            "url": "sale_invoice/delete_sale_invoice_register",
+            "method": "POST",
+            "sortNum": 670000,
+            "created": "2023-03-27T09:24:01.569Z",
+            "modified": "2023-03-27T09:24:01.569Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|k9qyXZoIwDHfrzsm94Mef0k0gMdhotoXeX9EM7d4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "16bde5d7-a34d-481e-9c0b-d89ffcda41cc",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Update Expense",
+            "url": "expense/update_expense",
+            "method": "POST",
+            "sortNum": 680000,
+            "created": "2023-03-27T09:24:01.570Z",
+            "modified": "2023-03-27T09:24:01.570Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    },
+                    {
+                        "name": "name",
+                        "value": "aaaaaaaa"
+                    },
+                    {
+                        "name": "total_price",
+                        "value": "500"
+                    },
+                    {
+                        "name": "paid",
+                        "value": "300"
+                    },
+                    {
+                        "name": "date",
+                        "value": "200-8-9"
+                    },
+                    {
+                        "name": "remained",
+                        "value": "200"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|GjUKGR9Bxds9fP5Fn3m84pIeJcqkSXOdUOXbSfaJ"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef799ea3-f75f-4f0c-b62a-42e7e56a8ee6",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "37caa1d4-2448-4063-a74e-79d023bcf662",
+            "name": "Meet Debt Sale Invoice",
+            "url": "sale_invoice/meet_debt_sale_invoice",
+            "method": "POST",
+            "sortNum": 680000,
+            "created": "2023-03-27T09:24:01.571Z",
+            "modified": "2023-03-27T09:24:01.571Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "payment",
+                        "value": "10000"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|14oSQDUxNPqXFFZoorhl1I3i8nDNGz1wmPl4xaDK"
+            },
+            "tests": []
+        },
+        {
+            "_id": "31e51262-f390-40b2-b06e-72420e87746c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Delete Expense",
+            "url": "expense/delete_expense",
+            "method": "POST",
+            "sortNum": 690000,
+            "created": "2023-03-27T09:24:01.572Z",
+            "modified": "2023-03-27T09:24:01.572Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f282b4de-dd28-4d5a-9454-d972c57d1878",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Get Regisers",
+            "url": "register/get_invoices_registers",
+            "method": "POST",
+            "sortNum": 700000,
+            "created": "2023-03-27T09:24:01.573Z",
+            "modified": "2023-03-27T09:24:01.573Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "type_money",
+                        "value": "purchases"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c4189949-f107-48b7-aafe-0c27594d9025",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Add Or Remove Cash",
+            "url": "register/add_or_remove_cash",
+            "method": "POST",
+            "sortNum": 710000,
+            "created": "2023-03-27T09:24:01.574Z",
+            "modified": "2023-03-27T12:33:53.494Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "total_price",
+                        "value": "1000000000"
+                    },
+                    {
+                        "name": "date",
+                        "value": "2020-02-02"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4beb6d27-3c4c-4195-980b-4e7b644c9c55",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Delete Register",
+            "url": "expense/delete_expense_register",
+            "method": "POST",
+            "sortNum": 710000,
+            "created": "2023-03-27T09:24:01.575Z",
+            "modified": "2023-03-27T09:24:01.575Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "6"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|GjUKGR9Bxds9fP5Fn3m84pIeJcqkSXOdUOXbSfaJ"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ec7f0d63-1922-4f48-a014-1cbc2e039c7c",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Get Register Invoice",
+            "url": "register/get_register_invoice",
+            "method": "POST",
+            "sortNum": 720000,
+            "created": "2023-03-27T09:24:01.576Z",
+            "modified": "2023-03-27T09:24:01.576Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "7"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0be14568-abf1-4038-a38d-aab2c877bb81",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Get Expense Register",
+            "url": "expense/get_expense_register",
+            "method": "POST",
+            "sortNum": 720000,
+            "created": "2023-03-27T09:24:01.577Z",
+            "modified": "2023-03-27T09:24:01.577Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f8b2e5f-d157-425d-8105-02f44b317cbd",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Update Register",
+            "url": "register/update_register",
+            "method": "POST",
+            "sortNum": 730000,
+            "created": "2023-03-27T09:24:01.578Z",
+            "modified": "2023-03-27T09:24:01.578Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "total_price",
+                        "value": "10000"
+                    },
+                    {
+                        "name": "date",
+                        "value": "2000-9-9"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b386ed7a-3568-4309-8221-f44570df3982",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "7e49b205-99c0-4827-8506-45821c29e84a",
+            "name": "Meet Debt Expense",
+            "url": "expense/meet_debt_expense",
+            "method": "POST",
+            "sortNum": 730000,
+            "created": "2023-03-27T09:24:01.579Z",
+            "modified": "2023-03-27T09:24:01.579Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "payment",
+                        "value": "99"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c914c347-31a4-4784-a4dc-0470efc1d2f2",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Delete Register",
+            "url": "register/delete_register",
+            "method": "POST",
+            "sortNum": 740000,
+            "created": "2023-03-27T09:24:01.580Z",
+            "modified": "2023-03-27T09:24:01.580Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "db32f5fa-21a0-4302-b82f-81a3bfb55a18",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Get Mony Box",
+            "url": "register/get_box",
+            "method": "POST",
+            "sortNum": 750000,
+            "created": "2023-03-27T09:24:01.581Z",
+            "modified": "2023-03-27T09:24:01.581Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "start date",
+                        "value": "2000-1-1",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "end date",
+                        "value": "2030-1-1",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "3|JXsZqQXW9Ato5NCP2fX1xAGzAISYt5B45NTCiv8W"
+            },
+            "tests": []
+        },
+        {
+            "_id": "40ef1783-922e-4c83-91e0-23e7b73350a1",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "da468c9d-3994-4ed0-80e9-e21fb24ad3cb",
+            "name": "Monitoring",
+            "url": "monitoring/get",
+            "method": "POST",
+            "sortNum": 760000,
+            "created": "2023-03-27T09:24:01.582Z",
+            "modified": "2023-03-27T19:38:57.360Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f985233-cb56-48c4-85a3-5017ef8dae36",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Get Money Box Registers",
+            "url": "register/get_register_registers",
+            "method": "POST",
+            "sortNum": 760000,
+            "created": "2023-03-27T09:24:01.583Z",
+            "modified": "2023-03-27T09:24:01.583Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "8"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "59eaa767-988f-4b7a-8918-6c26562e22b3",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocktaking Category",
+            "url": "stocktaking/category",
+            "method": "POST",
+            "sortNum": 770000,
+            "created": "2023-03-27T09:24:01.584Z",
+            "modified": "2023-03-27T09:24:01.584Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2000_1_1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2070_1_1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "3|ZIfBAddIUYRck7o0AkA6St9NoKzLAd9yO3yOoVeE"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c0212d6b-1848-4cf1-bcf5-65127bd56a15",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "b585ab9a-dccb-4284-8591-375c0d7a2514",
+            "name": "Delete Register",
+            "url": "register/delete_register_register",
+            "method": "POST",
+            "sortNum": 770000,
+            "created": "2023-03-27T09:24:01.585Z",
+            "modified": "2023-03-27T09:24:01.585Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "35797fa7-e2be-46e1-b676-653062cafeae",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocktaking Product",
+            "url": "stocktaking/product",
+            "method": "POST",
+            "sortNum": 780000,
+            "created": "2023-03-27T09:24:01.586Z",
+            "modified": "2023-03-27T09:24:01.586Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2000-1-1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2070-1-1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "8|PtvddzGwfN74gLcvggYoI64reyDRl7JdLAtyBOF4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "09c945c2-2a2b-4fd1-bf9f-a5ea9e269ca7",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocktaking Client",
+            "url": "stocktaking/client",
+            "method": "POST",
+            "sortNum": 790000,
+            "created": "2023-03-27T09:24:01.587Z",
+            "modified": "2023-03-27T09:24:01.587Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2000-1-1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2026-1-1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "8|PtvddzGwfN74gLcvggYoI64reyDRl7JdLAtyBOF4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8e22e49d-54ba-4190-9b80-49462c4efce8",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocktaking Supplier",
+            "url": "stocktaking/supplier",
+            "method": "POST",
+            "sortNum": 800000,
+            "created": "2023-03-27T09:24:01.588Z",
+            "modified": "2023-03-27T09:24:01.588Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2000-1-1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2026-1-1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f78b9fa-f66d-4704-ae51-72cd92b8ef1b",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Get Products",
+            "url": "stocktaking/get_products",
+            "method": "POST",
+            "sortNum": 810000,
+            "created": "2023-03-27T09:24:01.589Z",
+            "modified": "2023-03-27T09:24:01.589Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f4c72d0-9ff7-47e8-8964-a0877e3ba51a",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Get Clients",
+            "url": "stocktaking/get_clients",
+            "method": "POST",
+            "sortNum": 820000,
+            "created": "2023-03-27T09:24:01.590Z",
+            "modified": "2023-03-27T09:24:01.590Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c3b36d98-6a52-423f-9d77-f595464c345d",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Get Suppliers",
+            "url": "stocktaking/get_suppliers",
+            "method": "POST",
+            "sortNum": 830000,
+            "created": "2023-03-27T09:24:01.591Z",
+            "modified": "2023-03-27T09:24:01.591Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "05c68306-5b41-4d48-84d7-be5c03d109d3",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "f0a6c088-1b57-4855-a2bb-18b59566787f",
+            "name": "Stocking All",
+            "url": "stocktaking/all",
+            "method": "POST",
+            "sortNum": 840000,
+            "created": "2023-03-27T09:24:01.592Z",
+            "modified": "2023-03-27T09:24:01.592Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "start_date",
+                        "value": "2000-1-1"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2090-9-9"
+                    },
+                    {
+                        "name": "repository_id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|x8RlN6uHoQlyTUCckqh2G1LABk4J1Wi2j0STcPcb"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d33decca-2cc8-4b5f-840f-124fa8234ea3",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "66fa8ddb-04af-4551-b3c1-c4340ca38b00",
+            "name": "Delete Register",
+            "url": "category/delete_category_register",
+            "method": "POST",
+            "sortNum": 850000,
+            "created": "2023-03-27T09:24:01.593Z",
+            "modified": "2023-03-28T02:21:41.612Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "941c99b6-3e4b-4cbe-8bc2-96d40eb6c864",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Get Sale Invoice Register",
+            "url": "purchase_invoice/get_purchase_invoice_register",
+            "method": "POST",
+            "sortNum": 880000,
+            "created": "2023-03-27T09:24:01.594Z",
+            "modified": "2023-03-27T09:24:01.594Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a14a0b72-98e0-4d73-b121-b3f19733eed9",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Delete Register",
+            "url": "purchase_invoice/delete_purchase_invoice_register",
+            "method": "POST",
+            "sortNum": 890000,
+            "created": "2023-03-27T09:24:01.595Z",
+            "modified": "2023-03-27T09:24:01.595Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|k9qyXZoIwDHfrzsm94Mef0k0gMdhotoXeX9EM7d4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "041bea4c-c419-47bb-8b06-0af16431a3fb",
+            "colId": "b04c5589-e73f-495c-add7-1bbe90cc1ac0",
+            "containerId": "0b19eb58-b765-4b0a-a449-cabd3d9251f7",
+            "name": "Meet Debt Purchase Invoice",
+            "url": "purchase_invoice/meet_debt_purchase_invoice",
+            "method": "POST",
+            "sortNum": 910000,
+            "created": "2023-03-27T09:24:01.597Z",
+            "modified": "2023-03-27T09:24:01.597Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "1"
+                    },
+                    {
+                        "name": "payment",
+                        "value": "29000"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|w15qW1S1EsiiOOO67fWN0Nf14TyfhfuUi2BRPj3m"
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "headers": [],
+        "auth": {
+            "type": "bearer",
+            "bearer": "1|vwkfTC1EXW9ZYmIZbwLp0ulmTtMA5XdGbv5EvLWa"
+        },
+        "tests": [],
+        "options": {
+            "baseUrl": "http://localhost:8000/"
+        }
+    }
+}
