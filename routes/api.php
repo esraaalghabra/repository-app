@@ -111,6 +111,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('add_to_archives_suppliers', 'addToArchivesSuppliers');
         Route::post('remove_to_archives_suppliers', 'removeFromArchivesSuppliers');
         Route::post('get_archives_suppliers', 'getArchivesSuppliers');
+        Route::post('get_archive_supplier', 'getArchiveSupplier');
         Route::post('get_supplier_register', 'GetSupplierRegister');
         Route::post('delete_supplier_register', 'deleteSupplierRegister');
     });
@@ -159,7 +160,6 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('get_expense_register', 'getExpenseRegister');
         Route::post('delete_expense_register', 'deleteExpenseRegister');
         Route::post('meet_debt_expense', 'meetDebt');
-
     });
 
     Route::controller(MoneyBoxController::class)->prefix('register')->group(function () {

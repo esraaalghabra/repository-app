@@ -9,6 +9,7 @@ use App\Models\PurchaseInvoice;
 use App\Models\PurchaseInvoiceRegister;
 use App\Models\Repository;
 use App\Models\RepositoryUser;
+use App\Models\SaleInvoice;
 use App\Models\Supplier;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -302,7 +303,7 @@ class PurchaseInvoiceController extends Controller
      * get purchases invoice in archive with: register,purchases
      * @return JsonResponse
      */
-    public function getArchivePurchasesInvoice(): JsonResponse
+    public function getArchivePurchasesInvoice(Request $request): JsonResponse
     {
         $purchases_invoices = PurchaseInvoice::with(['purchases' => function ($q) {
             return $q->onlyTrashed()->select('product_id', 'purchase_invoice_id', 'amount', 'total_purchase_price')
@@ -311,9 +312,7 @@ class PurchaseInvoiceController extends Controller
                 }]);
         }])->with(['supplier' => function ($q) {
             return $q->select('id', 'name');
-        }])->onlyTrashed()->get();
-        if (!$purchases_invoices)
-            return $this->error();
+        }])->onlyTrashed()->where('id', $request->id)->first();
         return $this->success($purchases_invoices);
     }
 
