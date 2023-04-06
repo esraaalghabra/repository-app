@@ -132,7 +132,7 @@ class Controller extends BaseController
                     }
                     $sort[$i] = $count_invoice;
                     $clients_sort[$i] = Client::select('id', 'name', 'photo')->find($clients[$p]->id);
-                    $clients_sort[$i]->photo = asset('assets/images/products/' . $clients[$p]->photo);
+                    $clients_sort[$i]->photo = asset('assets/images/clients/' . $clients[$p]->photo);
                     break;
                 }
             }

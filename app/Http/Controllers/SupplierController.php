@@ -394,7 +394,7 @@ class SupplierController extends Controller
         $details['purchases_invoices'] = $supplier->purchases_invoices;
         $details['purchases'] = $supplier->purchases;
         $data['details'] = $details;
-        $data['photo'] = asset('assets/images/clients/' . $supplier->photo);
+        $data['photo'] = asset('assets/images/suppliers/' . $supplier->photo);
         return $this->success($data);
     }
 
